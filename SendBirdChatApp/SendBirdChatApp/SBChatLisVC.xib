@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SBChatLisVC">
+            <connections>
+                <outlet property="NavigationItem" destination="CsJ-8H-cCd" id="uzm-ny-lcj"/>
+                <outlet property="chatListTableView" destination="TGc-7i-IC6" id="5ro-2G-F6V"/>
+                <outlet property="noChannelLabel" destination="YsP-eh-LOQ" id="7P4-Ag-Pfy"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sRU-Gx-VAO">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="U5j-MF-uG5"/>
+                    </constraints>
+                    <textAttributes key="titleTextAttributes">
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </textAttributes>
+                    <items>
+                        <navigationItem title="Chats" id="CsJ-8H-cCd"/>
+                    </items>
+                </navigationBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TGc-7i-IC6">
+                    <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="irA-rE-eKh"/>
+                        <outlet property="delegate" destination="-1" id="UQG-SH-Pa5"/>
+                    </connections>
+                </tableView>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YsP-eh-LOQ">
+                    <rect key="frame" x="166" y="323" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="sRU-Gx-VAO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="9bd-NG-GPk"/>
+                <constraint firstItem="sRU-Gx-VAO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="B6h-Ij-Ngn"/>
+                <constraint firstItem="YsP-eh-LOQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="HY1-Ns-b2N"/>
+                <constraint firstItem="TGc-7i-IC6" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="JLv-eB-XZ9"/>
+                <constraint firstItem="YsP-eh-LOQ" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="LmR-4r-4Di"/>
+                <constraint firstItem="TGc-7i-IC6" firstAttribute="top" secondItem="sRU-Gx-VAO" secondAttribute="bottom" id="MfO-cd-dSS"/>
+                <constraint firstItem="sRU-Gx-VAO" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Nkd-vf-vLr"/>
+                <constraint firstItem="TGc-7i-IC6" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="X4B-xv-BLq"/>
+                <constraint firstItem="TGc-7i-IC6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ixx-Rt-DvQ"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="26.5" y="52.5"/>
+        </view>
+    </objects>
+</document>
